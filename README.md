@@ -8,16 +8,17 @@ It works for any kind of Python programs including Flask and Django extensions.
 
 It is highly customizable and heavily tested.
 
-> **TIP:** You can click `run` button above to run this example and see the output on the terminal on the sidebar.
-> For more real examples, open and explore the files on this project in the following order
-> - **config.py** (settings and validation) 
-> - **default_settings.toml**  (default values) 
-> - **settings.toml**   (main settings)  
-> - **.secrets.toml**  (gitignored sensitive settings) 
-> - **.env**  (environment variables exported) 
+> **TIP:** run `python main.py` on the terminal.
+>
+> Open and explore the files on this project in the following order
+> - **config.py** (settings and validation)
+> - **default_settings.toml**  (default values)
+> - **settings.toml**   (main settings)
+> - **.secrets.toml**  (gitignored sensitive settings)
+> - **.env**  (environment variables exported)
 > - **main.py** (the main program)
 
-> **another tip**: Open the `shell` on the sidebar and run 
+> **another tip**: On the `shell` and run
 > ```py
 > dynaconf -i config.settings list
 > ```
@@ -30,7 +31,7 @@ Full docs on https://dynaconf.com
 
 ### install
 
-The first thing you need is to install Dynaconf 
+The first thing you need is to install Dynaconf
 
 ```bash
 pip install dynaconf
@@ -40,12 +41,12 @@ pip install dynaconf
 
 ### Create your settings instance
 
-Then you need to create your settings instance and provide the configuration you need to customize dynaconf 
+Then you need to create your settings instance and provide the configuration you need to customize dynaconf
 You can also stick with the defaults.
 
 `yourproject/config.py`
 ```py
-from dynaconf import Dynaconf 
+from dynaconf import Dynaconf
 
 settings = Dynaconf(
     settings_files=["settings.toml", "other.yaml"],
@@ -56,10 +57,10 @@ settings = Dynaconf(
  available options on https://www.dynaconf.com/configuration/
 
 > **TIP** there is also a `dynaconf` CLI tool to automate that coding for you. more on: https://www.dynaconf.com/cli/#dynaconf-init
- 
+
 ---
 
-### Define your settings sources 
+### Define your settings sources
 
 `settings.toml`
 ```toml
@@ -86,7 +87,7 @@ export DYNACONF_KEY=value
 
 ---
 
-### Access your settings instance whenever you need 
+### Access your settings instance whenever you need
 
 `main.py`
 ```py
@@ -107,10 +108,11 @@ print(settings.key)
 
 ---
 
-Learn more on: https://dynaconf.com
-Contribute on: https://github.com/rochacbruno/dynaconf
-Sponsor on: https://opencollective.com/dynaconf
-Pro support on: https://xscode.com/rochacbruno/dynaconf
+
+- Learn more on: https://dynaconf.com
+- Contribute on: https://github.com/rochacbruno/dynaconf
+- Sponsor on: https://opencollective.com/dynaconf
+- Pro support on: https://xscode.com/rochacbruno/dynaconf
 
 thanks
 

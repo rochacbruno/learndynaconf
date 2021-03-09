@@ -8,6 +8,8 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 dynaconf = "~=3.1.4"
 Jinja2 = "^2.11.3"
+pynvim = "^0.4.3"
+jedi = "^0.18.0"
 
 [tool.poetry.dev-dependencies]
 
