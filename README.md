@@ -10,117 +10,56 @@ It is highly customizable and heavily tested.
 
 ---
 
-**Easily explore these files on** https://github.surf/rochacbruno/learndynaconf
+## Getting Started
 
 
-**Execute this project on Gitpod** https://gitpod.io/#https://github.com/rochacbruno/learndynaconf
+### Run this project from your browser
+
+Choose one option.
 
 
-**Explore this project on repl.it** https://repl.it/@rochacbruno/dynaconfplayground#README.md
+- **Execute this project on Gitpod** https://gitpod.io/#https://github.com/rochacbruno/learndynaconf
+
+- **Easily explore these files on** https://github.surf/rochacbruno/learndynaconf
+
+- **Explore this project on repl.it** https://repl.it/@rochacbruno/dynaconfplayground#README.md
+
+### Execute this project locally
+
+Requirements: Python 3.6+
+
+```bash
+git clone https://github.com/rochacbruno/learndynaconf.git
+cd learndynaconf
+pip install dynaconf jinja2
+```
+
+Run
+
+```py
+python main.py
+dynaconf -i config.settings –help
+dynaconf -i config.settings list
+```
 
 ---
 
+## Explore
 
-> **TIP:** run `python main.py` on the terminal.
->
-> Open and explore the files on this project in the following order
-> - 1. **`config.py`** (settings and validation)
-> - 2. **default_settings.toml**  (default values)
-> - 3. **settings.toml**   (main settings)
-> - 4. **.secrets.toml**  (gitignored sensitive settings)
-> - 5. **envfile/.env**  (environment variables exported)
-> - 6. **`main.py`** (the main program)
+Open and read the files on this project in the following order
 
-> **another tip**: On the `shell` and run
-> ```py
-> dynaconf -i config.settings list
-> ```
+1. **`config.py`** (settings and validation)  <- **START READING THIS**
+2. **default_settings.toml**  (default values)
+3. **settings.toml**   (main settings)
+4. **.secrets.toml**  (gitignored sensitive settings)
+5. **envfile/.env**  (environment variables exported)
+6. **`main.py`** (the main program)
 
 ---
-
-## Getting started
 
 Full docs on https://dynaconf.com
 
-### install
-
-The first thing you need is to install Dynaconf
-
-```bash
-pip install dynaconf
-```
-
 ---
-
-### Create your settings instance
-
-Then you need to create your settings instance and provide the configuration you need to customize dynaconf
-You can also stick with the defaults.
-
-`yourproject/config.py`
-```py
-from dynaconf import Dynaconf
-
-settings = Dynaconf(
-    settings_files=["settings.toml", "other.yaml"],
-    **options
-)
-```
-
- available options on https://www.dynaconf.com/configuration/
-
-> **TIP** there is also a `dynaconf` CLI tool to automate that coding for you. more on: https://www.dynaconf.com/cli/#dynaconf-init
-
----
-
-### Define your settings sources
-
-`settings.toml`
-```toml
-key = "value"
-```
-
-`other.yaml`
-```yaml
-key: value
-```
-
-`.env`
-```bash
-DYNACONF_KEY=value
-```
-
-`console`
-
-```bash
-export DYNACONF_KEY=value
-```
-
-> **TIP:** Dynaconf supports `json, yaml, toml, py, ini, .env` out of the box and can also load from vault server, redis and custom sources.
-
----
-
-### Access your settings instance whenever you need
-
-`main.py`
-```py
-
-from config import settings  # remember you instantiated on myproject/config.py
-
-print(settings.key)
-
-```
-
-> **TIP**: For more real examples, open and explore the files on this project in the following order
-> - **`config.py`** (settings and validation)
-> - **default_settings.toml**  (default values)
-> - **settings.toml**   (main settings)
-> - **.secrets.toml**  (gitignored sensitive settings)
-> - **envfile/.env**  (environment variables exported)
-> - **`main.py`** (the main program)
-
----
-
 
 - Learn more on: https://dynaconf.com
 - Contribute on: https://github.com/rochacbruno/dynaconf
