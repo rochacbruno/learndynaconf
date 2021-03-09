@@ -1,15 +1,14 @@
-
-# Import the settings that you created on `config.py`
+# -- Import the settings that you created on `config.py`
 from config import settings
 
 
-# Access the variables using dot notation
+# -- Access the variables using dot notation
 print(settings.NAME)  # outputs: Bruno
 
-# You can also access using dict like notation
+# -- You can also access using dict like notation
 print(settings["NAME"])  # outputs: Bruno
 
-# Access is case insensitive so you achieve the same with
+# -- Access is case insensitive so you achieve the same with
 print(settings.name)  # outputs: Bruno
 print(settings["name"])  # outputs: Bruno
 
@@ -17,10 +16,12 @@ print(settings["name"])  # outputs: Bruno
 #                      KEY          DEFAULT Value if doesn't exist
 print(settings.get("DoesThisExist", "looks like doesn't exist"))  # outputs: looks like doesn't exist
 
+
 # You can use Dynaconf to populate an objet
 class Person:
     name: str
     db: dict
+
 
 p = Person()
 
@@ -34,6 +35,7 @@ print(p.DB["PORT"])  # outputs: 8181
 print(settings.db.port)                         # outputs: 8181
 print(settings['db.server'])                    # outputs: Bruno.com
 print(settings.get("db.password", "changeme"))  # outputs: NewSecret789
+
 
 print(settings.db['timeout'])  # this was computed by the Validator, see `config.py`
                                # outputs: 11520
@@ -51,4 +53,10 @@ with settings.using_env('production'):
 # not production anymore
 print(settings.NAME)  # outputs: Bruno
 
+
 # CONGRATS!!! You are now a Certified Dynaconf User :)
+
+# Go to dynaconf.com and learn more on how to use it with Flask, Django
+# how to extend it and contribute
+
+# thanks :)
