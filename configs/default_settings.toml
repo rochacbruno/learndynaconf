@@ -1,0 +1,9 @@
+# These are the first values loaded
+
+[default]
+db = {engine = "postgresql"}     # You can use TOML dict like format
+
+[default.db]  # scoped sections also works
+engine = "postgresql"
+
+# NOW go and read the `configs/settings.toml` file

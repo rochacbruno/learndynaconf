@@ -1,0 +1,10 @@
+# Values here will override previously loaded from default_settings.toml
+
+[development]                    # All [environments] inherits values from [default] if defined
+name = "Bruno"
+db__port = 8181                  # to merge in value to existing dict, use `__` double underscore lookup.
+
+[production]
+name = "Root"
+
+# NOW go and read the `configs/.secrets.toml` file
