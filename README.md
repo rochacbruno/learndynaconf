@@ -8,15 +8,25 @@ It works for any kind of Python programs including Flask and Django extensions.
 
 It is highly customizable and heavily tested.
 
+---
+
+**Execute this project on Gitpod** https://gitpod.io/#https://github.com/rochacbruno/learndynaconf
+
+
+**Explore this project on repl.it** https://repl.it/@rochacbruno/dynaconfplayground#README.md
+
+---
+
+
 > **TIP:** run `python main.py` on the terminal.
 >
 > Open and explore the files on this project in the following order
-> - **config.py** (settings and validation)
-> - **default_settings.toml**  (default values)
-> - **settings.toml**   (main settings)
-> - **.secrets.toml**  (gitignored sensitive settings)
-> - **.env**  (environment variables exported)
-> - **main.py** (the main program)
+> - 1. **`config.py`** (settings and validation)
+> - 2. **default_settings.toml**  (default values)
+> - 3. **settings.toml**   (main settings)
+> - 4. **.secrets.toml**  (gitignored sensitive settings)
+> - 5. **envfile/.env**  (environment variables exported)
+> - 6. **`main.py`** (the main program)
 
 > **another tip**: On the `shell` and run
 > ```py
@@ -99,12 +109,12 @@ print(settings.key)
 ```
 
 > **TIP**: For more real examples, open and explore the files on this project in the following order
-> - **config.py** (settings and validation)
+> - **`config.py`** (settings and validation)
 > - **default_settings.toml**  (default values)
 > - **settings.toml**   (main settings)
 > - **.secrets.toml**  (gitignored sensitive settings)
-> - **.env**  (environment variables exported)
-> - **main.py** (the main program)
+> - **envfile/.env**  (environment variables exported)
+> - **`main.py`** (the main program)
 
 ---
 

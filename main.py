@@ -1,15 +1,15 @@
 
-# Import the settings that you created on `config.py` 
-from config import settings 
+# Import the settings that you created on `config.py`
+from config import settings
 
 
-# Access the variables using dot notation 
+# Access the variables using dot notation
 print(settings.NAME)  # outputs: Bruno
 
 # You can also access using dict like notation
 print(settings["NAME"])  # outputs: Bruno
 
-# Access is case insensitive so you achieve the same with 
+# Access is case insensitive so you achieve the same with
 print(settings.name)  # outputs: Bruno
 print(settings["name"])  # outputs: Bruno
 
@@ -35,7 +35,7 @@ print(settings.db.port)                         # outputs: 8181
 print(settings['db.server'])                    # outputs: Bruno.com
 print(settings.get("db.password", "changeme"))  # outputs: NewSecret789
 
-print(settings.db['timeout'])  # this was computed by the Validator, see `config.py` 
+print(settings.db['timeout'])  # this was computed by the Validator, see `config.py`
                                # outputs: 11520
 
 # Remember our lazy computed values? from `.env` file using `@jinja`.
@@ -50,3 +50,5 @@ with settings.using_env('production'):
 
 # not production anymore
 print(settings.NAME)  # outputs: Bruno
+
+# CONGRATS!!! You are now a Certified Dynaconf User :)

@@ -1,4 +1,4 @@
-# -- First you import Dynaconf 
+# -- First you import Dynaconf
 from dynaconf import Dynaconf, Validator
 
 # -- Then you create your `settings` instance
@@ -7,11 +7,11 @@ settings = Dynaconf(
         "default_settings.toml",      # a file for default settings
         "settings.toml",              # a file for main settings
         ".secrets.toml"               # a file for sensitive data (gitignored)
-    ], 
+    ],
 
-    environments=True,                # Enable layered environments 
+    environments=True,                # Enable layered environments
                                       # (sections on config file for development, production, testing)
-    
+
     load_dotenv=True,                 # Load envvars from a file named `.env`
                                       # TIP: probably you don't want to load dotenv on production environments
                                       #      pass `load_dotenv={"when": {"env": {"is_in": ["development"]}}}
@@ -24,12 +24,12 @@ settings = Dynaconf(
 # More options on https://www.dynaconf.com/configuration/
 
 
-# -- Lets add some Validation and Defaults 
+# -- Lets add some Validation and Defaults
 settings.validators.register(
-    # Must there be a NAME defined 
+    # Must there be a NAME defined
     # under [development] env (run mode) the name should be equal to "Bruno"
     Validator("NAME", must_exist=True, eq="Bruno", env="development"),
-    # under [production] the name should be equal to "Root" 
+    # under [production] the name should be equal to "Root"
     Validator("NAME", must_exist=True, eq="Root", env="production"),
     # there must be a DB dictionary, having a PORT as integer
     Validator("DB.PORT", must_exist=True, is_type_of=int),
@@ -43,10 +43,10 @@ settings.validators.register(
     # Defaults can also be used to define computed values if default=a_callable
     Validator("DB.TIMEOUT", default=lambda _settings, _value: 24 * 60 * _settings.factor),
 
-    # You can compound validators for better meaning 
+    # You can compound validators for better meaning
     Validator("DB.USER", ne="pgadmin") & Validator("DB.USER", ne="master"),
 
-    # You can validate a key ONLY IF other exits 
+    # You can validate a key ONLY IF other exits
     # Password must be defined if user is defined
     Validator("DB.PASSWORD", must_exist=True, when=Validator("DB.USER", must_exist=True)),
 )
@@ -58,3 +58,6 @@ settings.validators.validate()
 # More details on https://www.dynaconf.com/validation/
 
 # NOTE: On Dynaconf 4.0.0 all the above will be also possible as a pydantic schema :)
+
+
+# NOW go and read the `default_settings.toml` file
