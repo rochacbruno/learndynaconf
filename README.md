@@ -24,7 +24,7 @@ Choose one option.
 
 - **Explore this project on repl.it** https://repl.it/@rochacbruno/dynaconfplayground#README.md
 
-### Execute this project locally
+### Or Execute this project locally
 
 Requirements: Python 3.6+
 
@@ -34,7 +34,7 @@ cd learndynaconf
 pip install dynaconf jinja2
 ```
 
-Run
+### Run
 
 ```py
 python main.py
@@ -44,11 +44,11 @@ dynaconf -i config.settings list
 
 ---
 
-## Explore
+## Read and Explore
 
 Open and read the files on this project in the following order
 
-1. **`config.py`** (settings and validation)  <- **START READING THIS**
+1. **[config.py](/config.py)** (settings and validation)  <- **START READING THIS**
 2. **default_settings.toml**  (default values)
 3. **settings.toml**   (main settings)
 4. **.secrets.toml**  (gitignored sensitive settings)
