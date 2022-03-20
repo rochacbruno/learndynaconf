@@ -36,9 +36,9 @@ pip install dynaconf jinja2
 
 ### Run
 
-```py
+```bash
 python main.py
-dynaconf -i config.settings –help
+dynaconf -i config.settings --help
 dynaconf -i config.settings list
 ```
 
